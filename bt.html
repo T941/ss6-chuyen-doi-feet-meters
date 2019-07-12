@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Meters</label>
+        <input id="input" type="number" 
+               oninput="meterToFoot(this.value)"
+               onchange="meterToFoot(this.value)">
+    </p>
+    <p>Feet: <span id="output"></span></p>
+</form>
+
+<script>
+
+    function meterToFoot(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("output").innerHTML=(3.279 * meter);
+    }
+
+</script>
+</body>
+</html>
